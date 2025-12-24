@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "swan-platform",
+    "prod": "swan-platform"
+  },
+  "targets": {},
+  "etags": {}
+}

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
+
 const props = defineProps<{
   title: string
   subtitle: string
@@ -20,6 +22,13 @@ const openEmail = () => {
           <p class="text-base text-brand-sand/90 lg:text-lg">{{ props.subtitle }}</p>
           <div class="flex flex-wrap items-center gap-3">
             <el-button size="large" class="!bg-white !text-brand-deep" @click="openEmail">Start a partnership</el-button>
+            <RouterLink
+              to="/donate"
+              class="inline-flex items-center gap-2 rounded-full bg-brand-deep/80 px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-white hover:text-brand-deep"
+            >
+              Donate now
+              <span aria-hidden="true">→</span>
+            </RouterLink>
             <a
               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-sand hover:text-white"
               href="https://www.guidestar.org/"

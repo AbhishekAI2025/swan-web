@@ -1,0 +1,21 @@
+# Global ignores
+node_modules
+.DS_Store
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+dist
+
+# App outputs
+apps/*/node_modules
+apps/*/dist
+apps/*/lib
+
+# Firebase / local tooling
+firebase-debug.log*
+.firebase/
+.runtimeconfig.json
+
+# Environment files
+.env
+.env.*

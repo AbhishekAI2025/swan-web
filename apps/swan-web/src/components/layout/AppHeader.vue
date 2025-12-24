@@ -15,6 +15,8 @@ const navLinks: NavLink[] = [
   { label: 'Programs', to: { path: '/', hash: '#programs' } },
   { label: 'Impact', to: { path: '/', hash: '#impact' } },
   { label: 'About', to: { path: '/about' } },
+  { label: 'Donate', to: { path: '/donate' } },
+  { label: 'Volunteer', to: { path: '/volunteer' } },
 ]
 
 const isActive = (link: NavLink) => {
@@ -63,7 +65,7 @@ const isActive = (link: NavLink) => {
           Contact
         </RouterLink>
         <RouterLink
-          :to="{ path: '/', hash: '#donate' }"
+          :to="{ path: '/donate' }"
           class="inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:translate-y-[-1px] hover:bg-brand-deep"
         >
           Donate

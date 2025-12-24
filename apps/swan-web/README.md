@@ -46,4 +46,27 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Environment for Stripe Donate page
+
+- `VITE_STRIPE_PUBLISHABLE_KEY` – required to render Stripe Elements.
+- `VITE_FUNCTIONS_BASE_URL` – optional; set to your Firebase Functions base URL (defaults to production).
+
+### Volunteer form
+- Uses `submitVolunteer` Firebase Function to write to Firestore `volunteers` collection.
+- Fields: name (required), email (required), phone, interests, notes, honeypot.
+
+### Admin-only authentication (Firebase Auth)
+- Env vars required:
+  - `VITE_FIREBASE_API_KEY`
+  - `VITE_FIREBASE_AUTH_DOMAIN`
+  - `VITE_FIREBASE_PROJECT_ID`
+  - `VITE_ADMIN_EMAILS` (comma-separated allowlist)
+- Routes:
+  - `/admin/login` – admin sign-in
+  - `/admin` – protected dashboard (guarded by allowlist)
+
+### Admin dashboard (read-only)
+- Reads Firestore collections: `donations`, `volunteers`, `contacts`.
+- Shows counts and tables only; no mutations.
 # swan-web

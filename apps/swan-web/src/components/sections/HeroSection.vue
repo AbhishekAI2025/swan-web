@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 
 import type { ImpactStat } from '@/types/content'
+import { useRouter } from 'vue-router'
 
 defineProps<{
   stats: ImpactStat[]
@@ -14,9 +15,10 @@ const commitments = [
   'Climate-smart solutions that honor local knowledge',
 ]
 
-const scrollToDonate = () => {
-  const anchor = document.getElementById('donate')
-  anchor?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+const router = useRouter()
+
+const goToDonate = () => {
+  router.push('/donate')
 }
 </script>
 
@@ -35,7 +37,7 @@ const scrollToDonate = () => {
           </p>
 
           <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <el-button size="large" color="#1f7a8c" class="!text-white" @click="scrollToDonate">
+            <el-button size="large" color="#1f7a8c" class="!text-white" @click="goToDonate">
               Fund a water system
             </el-button>
             <RouterLink
