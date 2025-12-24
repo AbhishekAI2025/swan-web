@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-brand-sky/60 via-white to-brand-sand text-slate-800 antialiased;
+    font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  #app {
+    @apply min-h-screen text-slate-800;
+  }
+
+  a {
+    @apply text-brand-primary transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-brand-deep;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Manrope', 'DM Sans', system-ui, sans-serif;
+    @apply text-slate-900;
+  }
+
+  ::selection {
+    @apply bg-brand-primary text-white;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply max-w-6xl mx-auto px-6 lg:px-12;
+  }
+
+  .card-soft {
+    @apply bg-white/90 backdrop-blur shadow-soft border border-slate-200/60 rounded-2xl;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide bg-brand-sky text-brand-deep;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-brand-deep;
+  }
+}
