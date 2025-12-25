@@ -5,3 +5,5 @@ import AppShell from './components/layout/AppShell.vue'
 <template>
   <AppShell />
 </template>
+
+<style lang="scss"></style>
